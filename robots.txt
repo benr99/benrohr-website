@@ -1,4 +1,4 @@
-# https://benrohr.com robots.txt
+# https://benrohr.co robots.txt
 
 User-agent: *
 Allow: /
@@ -29,4 +29,4 @@ User-agent: cohere-ai
 Allow: /
 
 # Sitemap location
-Sitemap: https://benrohr.com/sitemap.xml
+Sitemap: https://benrohr.co/sitemap.xml
