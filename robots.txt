@@ -1,0 +1,76 @@
+# robots.txt — benrohr.co
+# Updated for 2026: includes all major search + AI crawlers
+
+# All search engines
+User-agent: *
+Allow: /
+
+# Google Search
+User-agent: Googlebot
+Allow: /
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing / Microsoft
+User-agent: Bingbot
+Allow: /
+
+# ---- AI CRAWLERS (Generative Engine Optimization) ----
+# Allowing these crawlers enables citation in ChatGPT, Perplexity,
+# Google AI Overviews, Claude, Bing Copilot, and other AI systems.
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google Gemini (AI training + Gemini responses)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic / Claude
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Apple / Siri
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot (AI knowledge graph)
+User-agent: Diffbot
+Allow: /
+
+# Common Crawl (feeds many AI datasets)
+User-agent: CCBot
+Allow: /
+
+# ---- SITEMAP ----
+Sitemap: https://benrohr.co/sitemap.xml
