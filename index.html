@@ -38,13 +38,17 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>BR</text></svg>">
-  <meta name="theme-color" content="#18100A">
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2308131c'/><text x='50' y='50' dy='.35em' text-anchor='middle' font-family='Arial,sans-serif' font-size='46' font-weight='600' letter-spacing='-2' fill='%23b87442'>BR</text></svg>">
+  <meta name="theme-color" content="#08131c">
 
   <!-- Google Fonts — preconnect first, then stylesheet (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Instrument+Serif:ital@0;1&display=swap">
+
+  <!-- Preload the LCP portrait -->
+  <link rel="preload" as="image" href="benjamin-rohr.jpg" fetchpriority="high">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -170,49 +174,57 @@
 
 <body>
 
-  <main class="page" id="top">
-    <div class="cards">
+  <a class="skip-link" href="#about">Skip to content</a>
 
-      <!-- Profile Card -->
-      <article class="card profile-card animate-in" id="about"
+  <main class="page" id="top">
+    <div class="shell">
+
+      <!-- Intro -->
+      <article class="section section-intro animate-in" id="about"
         itemscope itemtype="https://schema.org/Person">
-        <figure class="profile-photo-fig">
-          <img src="benjamin-rohr.jpg"
-            alt="Benjamin Rohr, Real Estate Finance Principal at Light Tower Group, New York"
-            class="profile-photo"
-            itemprop="image"
-            width="400" height="400"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async">
-        </figure>
-        <div class="profile-info">
-          <div class="profile-name-block">
-            <h1 class="profile-name" itemprop="name">Benjamin Rohr</h1>
-            <p class="profile-role" itemprop="jobTitle">Principal &middot; <a href="https://lighttowergroup.co"
-                target="_blank" rel="noopener" itemprop="worksFor">Light Tower Group</a></p>
-          </div>
-          <div class="profile-bio-block">
-            <p class="profile-bio" itemprop="description">I structure capital, architect deals, and build lasting
-              value — placing $5M–$100M in debt and equity for commercial real estate across the country.</p>
-            <p class="profile-bio-secondary">Off the desk, I write and study philosophy, psychology, religion,
-              history, and politics. I've found that the habits of mind that make for a good investor — patience,
-              precision, a long view — are the same ones that make for serious inquiry.</p>
-          </div>
-          <p class="profile-facts" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <span itemprop="addressLocality">New York</span> &middot; $100M+ in capital placements
-          </p>
-          <div class="profile-actions">
-            <a href="mailto:ben@lighttowergroup.co" class="btn btn-primary" itemprop="email">Email Me</a>
-            <a href="https://www.linkedin.com/in/benrohr/" class="btn btn-outline" target="_blank"
-              rel="noopener me" itemprop="sameAs">LinkedIn ↗</a>
+        <div class="intro-head">
+          <p class="section-label">Real Estate Finance &middot; New York</p>
+          <h1 class="profile-name" itemprop="name">Benjamin Rohr</h1>
+          <p class="profile-role"><span itemprop="jobTitle">Principal</span> at <a
+              href="https://lighttowergroup.co" target="_blank" rel="noopener">Light Tower Group</a></p>
+        </div>
+        <div class="intro-grid">
+          <figure class="profile-photo-fig">
+            <img src="benjamin-rohr.jpg"
+              alt="Benjamin Rohr, Real Estate Finance Principal at Light Tower Group, New York"
+              class="profile-photo"
+              itemprop="image"
+              width="400" height="400"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async">
+          </figure>
+          <div class="intro-content">
+            <div class="profile-bio-block">
+              <p class="profile-bio" itemprop="description">I structure capital, architect deals, and build lasting
+                value — placing $5M–$100M in debt and equity for commercial real estate across the country.</p>
+              <p class="profile-bio-secondary">Off the desk, I write and study philosophy, psychology, religion,
+                history, and politics. I've found that the habits of mind that make for a good investor — patience,
+                precision, a long view — are the same ones that make for serious inquiry.</p>
+            </div>
+            <p class="profile-facts">
+              <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span
+                  itemprop="addressLocality">New York</span></span>
+              <span>$100M+ placed</span>
+              <span>$5M&ndash;$100M mandates</span>
+            </p>
+            <div class="profile-actions">
+              <a href="mailto:ben@lighttowergroup.co" class="btn btn-primary" itemprop="email">Email Me</a>
+              <a href="https://www.linkedin.com/in/benrohr/" class="btn btn-outline" target="_blank"
+                rel="noopener me" itemprop="sameAs">LinkedIn ↗</a>
+            </div>
           </div>
         </div>
       </article>
 
-      <!-- Work Card -->
-      <section class="card work-card animate-in delay-1" id="services">
-        <div class="work-header">
+      <!-- Practice -->
+      <section class="section animate-in delay-1" id="services">
+        <div class="section-head">
           <p class="section-label">Commercial Practice</p>
           <h2 class="card-title">What I Do</h2>
           <a href="https://lighttowergroup.co" class="link-arrow" target="_blank" rel="noopener">Principal at Light Tower Group <span aria-hidden="true">→</span></a>
@@ -236,12 +248,10 @@
             <span class="track-number">$100M+</span>
             <span class="track-label">Capital Placed</span>
           </div>
-          <div class="track-divider"></div>
           <div class="track-stat">
             <span class="track-number">2020</span>
             <span class="track-label">Principal Since</span>
           </div>
-          <div class="track-divider"></div>
           <div class="track-stat">
             <span class="track-number">Nationwide</span>
             <span class="track-label">Multifamily &amp; Mixed-Use</span>
@@ -249,12 +259,14 @@
         </div>
       </section>
 
-      <!-- Contact Card -->
-      <section class="card contact-card animate-in delay-2" id="contact">
-        <p class="section-label">Get in Touch</p>
-        <h2 class="card-title">Let's Talk</h2>
-        <p class="contact-note">Currently accepting mandates for capital placement, investment partnerships, and
-          speaking engagements.</p>
+      <!-- Contact -->
+      <section class="section animate-in delay-2" id="contact">
+        <div class="section-head">
+          <p class="section-label">Get in Touch</p>
+          <h2 class="card-title">Let's Talk</h2>
+          <p class="contact-note">Currently accepting mandates for capital placement, investment partnerships, and
+            speaking engagements.</p>
+        </div>
         <div class="contact-actions">
           <a href="mailto:ben@lighttowergroup.co" class="btn btn-primary">Email Me</a>
           <a href="https://www.linkedin.com/in/benrohr/" class="btn btn-outline" target="_blank"
@@ -279,15 +291,49 @@
   </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    /* Scroll reveal.
+       The cards start at opacity 0, so this is the only thing that makes the
+       page visible — it must never be able to leave content hidden. Every exit
+       path (reduced motion, no IntersectionObserver, a throttled or never-fired
+       callback, a thrown error) ends with everything revealed. */
+    (function () {
+      var items = [].slice.call(document.querySelectorAll('.animate-in'));
+      if (!items.length) return;
 
-    document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+      function revealAll() {
+        items.forEach(function (el) { el.classList.add('visible'); });
+      }
+
+      var reduceMotion = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealAll();
+        return;
+      }
+
+      try {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        items.forEach(function (el) { observer.observe(el); });
+      } catch (e) {
+        revealAll();
+        return;
+      }
+
+      /* Failsafe: if the observer hasn't revealed everything shortly after
+         load, show it anyway rather than risk a blank page. */
+      window.addEventListener('load', function () {
+        setTimeout(revealAll, 1200);
+      });
+    })();
   </script>
 
 </body>
