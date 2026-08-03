@@ -3,3 +3,9 @@
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Lossless image masters.
+# The deployed benjamin-rohr.jpg and og-image.jpg are lossy JPEGs derived from
+# "Ben Rohr (2).png" (720x720). Keep that original on disk to re-encode from —
+# it just doesn't need to ship with the site.
+Ben Rohr (2).png
